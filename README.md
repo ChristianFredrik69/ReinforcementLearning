@@ -1,2 +1,0 @@
-# ReinforcementLearning
-Alt av RL
