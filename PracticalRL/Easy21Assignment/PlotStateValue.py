@@ -3,7 +3,7 @@ import numpy as np
 from collections import defaultdict
 import matplotlib.pyplot as plt
 
-with open ('Pickle/MonteCarloActionValue.pkl', 'rb') as f:
+with open ('PracticalRL/Pickle/MonteCarloActionValue.pkl', 'rb') as f:
     Q = pickle.load(f)
 
 def plot():

@@ -4,7 +4,7 @@ class Easy21Environment:
     
     def __init__(self):
         """
-        Initialize the environment.
+        Initializes the environment.
         """
 
         # We have two players:
@@ -39,8 +39,8 @@ class Easy21Environment:
 
     def step(self, action):
         """
-        Execute action (hit or stick) and return the next state of the game,
-        and the reward. If the game is over, this method should also let us know.
+        Executes action (0 = stick, and 1 = hit) and returns the next state of the game
+        and the reward. The method also alerts when the game is over, by setting done = 1.
         Returns a tuple (next_state, reward, done)
         """
 

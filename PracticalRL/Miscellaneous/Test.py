@@ -1,4 +1,8 @@
 from collections import defaultdict
+from itertools import product
+import numpy as np
+
+
 print("Hello World!")
 
 dictor = defaultdict(lambda: [0.0] * 2)
@@ -40,3 +44,38 @@ def kløbb():
 
 klubb()
 kløbb()
+
+grog = [1, 3, 4]
+ghu = [1, 1, 1]
+gruss = [a + b for a, b in zip(grog, ghu)]
+print(grog + ghu)
+print(gruss)
+
+print("Klaus incoming: \n")
+gogg = [[1, 2], [1, 8], [1, 3]]
+sad_gogg = [[1, 2], [1, 8], [1]]
+
+klaus = zip(*gogg)
+klaus_bro = zip(*sad_gogg)
+
+for key in klaus:
+    print(key)
+
+print("Klaus bro:\n")
+for key in klaus_bro:
+    print(key)
+
+print(2*ghu)
+
+dealer = [i for i in range(1, 11)]
+player = [i for i in range(1, 22)]
+states = product(dealer, player)
+# for state in states:
+#     print(state)
+
+grubb = np.zeros(5)
+grabb = np.zeros(5)
+
+grabb[0], grabb[1] = 8, 2
+
+print(grubb + grabb)

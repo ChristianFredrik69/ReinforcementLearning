@@ -166,6 +166,34 @@ class SarsaLambdaControl:
 
         return self.get_policy(), mse_values
 
+
+    def plot_error_lambda(mc_action_value, num_episodes = 1000):
+        """
+        Plotting the MSE for different values of lambda.
+        The lambdas which are used are in range [0, 1] with step size 0.1
+        """        
+        mse_values = []
+        for i in range(11):
+            agent = SarsaLambdaControl(Easy21Environment(), lamb = i / 10)
+            agent.learn(num_episodes)    
+            MSE = sum( (agent.Q[state][action] - mc_action_value[state][action])**2 for state in mc_action_value for action in range(len(mc_action_value[state] ))) / ( len(mc_action_value) * agent.env.action_space.n)
+            mse_values.append([i/10, MSE])
+        
+        fig = plt.figure(figsize = (12, 6))
+        ax = fig.add_subplot(111)
+        
+        lambdas, mse_values = zip(*mse_values)
+        ax.plot(lambdas, mse_values, marker='o')
+
+        ax.set_xlabel("Lambda")
+        ax.set_ylabel("MSE")
+        ax.set_title("MSE for different values of lambda:")
+        ax.grid(True)
+
+        plt.show()
+
+
+        
     
     def plot_state_value_function(self):
 
@@ -204,38 +232,40 @@ class SarsaLambdaControl:
         
         plt.show()
 
-def plot_mse(agent0, agent1, q_star, num_episodes = 1_000):
-    
-    _, mse0 = agent0.learn(num_episodes, q_star)
-    _, mse1 = agent1.learn(num_episodes, q_star)
+    def plot_mse(agent0, agent1, q_star, num_episodes = 1_000):
+        
+        _, mse0 = agent0.learn(num_episodes, q_star)
+        _, mse1 = agent1.learn(num_episodes, q_star)
 
-    fig = plt.figure(figsize = (12, 6))
+        fig = plt.figure(figsize = (12, 6))
 
-    ax = fig.add_subplot(111)
+        ax = fig.add_subplot(111)
 
-    ax.plot(mse0, label = 'λ = 0')
-    ax.plot(mse1, label = 'λ = 1')
+        ax.plot(mse0, label = 'λ = 0')
+        ax.plot(mse1, label = 'λ = 1')
 
-    ax.set_xlabel('Episodes')
-    ax.set_ylabel('Mean Squared Error')
-    ax.set_title('MSE between SarsaLambda and Q*')
+        ax.set_xlabel('Episodes')
+        ax.set_ylabel('Mean Squared Error')
+        ax.set_title('MSE between SarsaLambda and Q*')
 
-    ax.legend()
+        ax.legend()
 
-    plt.show()
+        plt.show()
 
 
 # Retrieving the action-value function from the MonteCarlo-algorithm
 # This with-open syntax does not create a new inner scope. Only method declarations, class definitions and modules have this property.
-with open ('Pickle/MonteCarloActionValue.pkl', 'rb') as f:
+with open ('PracticalRL/Pickle/MonteCarloActionValue.pkl', 'rb') as f:
     mc_action_value = pickle.load(f)
 
+### Plots the MSE after 1000 episodes for different values of lambda
+# SarsaLambdaControl.plot_error_lambda(mc_action_value)
 
+### For plotting the MSE of lambda = 0 and lambda = 1:
+# agent0 = SarsaLambdaControl(Easy21Environment(), lamb = 0)
+# agent1 = SarsaLambdaControl(Easy21Environment(), lamb = 1)
+# SarsaLambdaControl.plot_mse(agent0, agent1, mc_action_value, num_episodes = 1_000)
 
-# For plotting the MSE of lambda = 0 and lambda = 1:
-agent0 = SarsaLambdaControl(Easy21Environment(), lamb = 0)
-agent1 = SarsaLambdaControl(Easy21Environment(), lamb = 1)
-plot_mse(agent0, agent1, mc_action_value, num_episodes = 60_000)
 
 
 """
@@ -252,7 +282,7 @@ for i in range(11):
 
 policy, _ = agent.learn(100_000)
 
-with open('Policies/SarsaLambda21.txt', 'w') as f:
+with open('PracticalRL/Policies/SarsaLambda21.txt', 'w') as f:
         sorted_dict = dict(sorted(policy.items(), key = lambda x: (x[0][0], x[0][1])))
         for state in sorted_dict:
             f.write(str(state) + ": " + str(policy[state]) + "\n")
@@ -262,3 +292,12 @@ with open('Policies/SarsaLambda21.txt', 'w') as f:
 agent.plot_state_value_function()
 """
 
+
+# agent = SarsaLambdaControl(Easy21Environment())
+# policy, _ = agent.learn(100_000)
+
+# with open('PracticalRL/Policies/SarsaLambda21.txt', 'w') as f:
+#         sorted_dict = dict(sorted(policy.items(), key = lambda x: (x[0][0], x[0][1])))
+#         for state in sorted_dict:
+#             f.write(str(state) + ": " + str(policy[state]) + "\n")
+#         f.close()
