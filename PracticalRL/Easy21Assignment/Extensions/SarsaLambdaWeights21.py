@@ -176,10 +176,7 @@ class SarsaLambdaControl:
         ax.grid(True)
 
         plt.show()
-
-
-        
-    
+ 
     def plot_state_value_function(self):
 
         # Extract the state-value function from the agent

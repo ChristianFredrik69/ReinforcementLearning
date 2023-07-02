@@ -98,7 +98,7 @@ class Easy21Environment:
 
     class ActionSpace:
         """
-        Making an ActoinSpace-class, such that i have the same methods as in the Gym environment.
+        Making an ActionSpace-class, such that i have the same methods as in the Gym environment.
         """
         def __init__(self, n):
             self.n = n

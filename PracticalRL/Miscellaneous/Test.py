@@ -1,7 +1,9 @@
 from collections import defaultdict
 from itertools import product
 import numpy as np
-
+import torch
+import wandb
+import sys
 
 print("Hello World!")
 
@@ -79,3 +81,9 @@ grabb = np.zeros(5)
 grabb[0], grabb[1] = 8, 2
 
 print(grubb + grabb)
+
+# print(torch.cuda.is_available())
+
+print(np.array([[1, 2], [1, 2]]))
+
+print(sys.path)

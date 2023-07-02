@@ -1,0 +1,1 @@
+{"training return": 40.0, "train episode length": 40, "_timestamp": 1688253388.985313, "_runtime": 89.27395296096802, "_step": 519, "loss": 0.7323814626783133, "eval return": 63.0, "eval episode length": 63, "_wandb": {"runtime": 88}}

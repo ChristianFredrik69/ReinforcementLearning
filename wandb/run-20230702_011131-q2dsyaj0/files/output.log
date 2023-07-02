@@ -1,0 +1,53 @@
+Episode 1 episode return: 9.0	
+Episode 2 episode return: 9.0	
+Episode 3 episode return: 12.0	
+Episode 4 episode return: 10.0	
+Episode 5 episode return: 8.0	
+Episode 6 episode return: 11.0	
+Episode 7 episode return: 13.0	
+Episode 8 episode return: 15.0	
+Episode 9 episode return: 10.0	
+Episode 10 episode return: 12.0	
+Episode 11 episode return: 36.0	
+Episode 12 episode return: 25.0	
+Episode 13 episode return: 20.0	
+Episode 14 episode return: 14.0	
+Episode 15 episode return: 23.0	
+Episode 16 episode return: 13.0	
+Episode 17 episode return: 10.0	
+Episode 18 episode return: 10.0	
+Episode 19 episode return: 10.0	
+Episode 20 episode return: 25.0	
+Episode 21 episode return: 31.0	
+Episode 22 episode return: 12.0	
+Episode 23 episode return: 20.0	
+Episode 24 episode return: 29.0	
+Episode 25 episode return: 11.0	
+Traceback (most recent call last):
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\envs\classic_control\cartpole.py", line 223, in render
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "c:\Users\cjohn\OneDrive\Desktop\Reinforcement Learning\Cogito\DQN)\CartPole.py", line 82, in <module>
+    train_agent(agent)
+  File "c:\Users\cjohn\OneDrive\Desktop\Reinforcement Learning\Cogito\DQN)\CartPole.py", line 59, in train_agent
+    obs, info = eval_env.reset()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\wrappers\time_limit.py", line 75, in reset
+    return self.env.reset(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\wrappers\order_enforcing.py", line 61, in reset
+    return self.env.reset(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\wrappers\env_checker.py", line 55, in reset
+    return env_reset_passive_checker(self.env, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\utils\passive_env_checker.py", line 215, in env_reset_passive_checker
+    result = env.reset(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\envs\classic_control\cartpole.py", line 209, in reset
+    self.render()
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\gymnasium\envs\classic_control\cartpole.py", line 226, in render
+    raise DependencyNotInstalled(
+gymnasium.error.DependencyNotInstalled: pygame is not installed, run `pip install gymnasium[classic-control]`

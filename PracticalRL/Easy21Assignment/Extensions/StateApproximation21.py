@@ -1,7 +1,10 @@
 import numpy as np
 from collections import defaultdict
+import sys
+
 
 # The self-made environment for Easy21.
+sys.path.append('PracticalRL/Easy21Assignment')
 from Environment import Easy21Environment
 
 # Importing function which provides cartesian product:
@@ -31,7 +34,7 @@ class LinearFunctionApproximationControl:
         self.alpha = alpha
 
         # Intializing some weights, One weight for each feature:
-        self.w = np.zeros(36)
+        self.w = np.zeros((18, 2))
     
 
     def learn_episode(self):
@@ -45,10 +48,10 @@ class LinearFunctionApproximationControl:
         action = self.get_action(state)
         
         # Getting the feature vector representation of our state-action pair:
-        feature_vector = self.get_feature_vector(state, action)
+        feature_vector = self.get_feature_vector(state)
 
         # Initializing the eligibility trace:
-        E = np.zeros(36)
+        E = np.zeros((18, 2))
 
         while True:
             
@@ -59,11 +62,11 @@ class LinearFunctionApproximationControl:
             next_action = self.get_action(state)
 
             # We must remember to represent the next state, next action pair as a feature vector.
-            next_feature_vector = self.get_feature_vector(next_state, next_action)
+            next_feature_vector = self.get_feature_vector(next_state)
 
             # Updating the eligibility trace:
             E *= self.lamb * self.gamma
-            E += feature_vector
+            E[:, action] += feature_vector.T
             
 
             if done:
@@ -73,7 +76,7 @@ class LinearFunctionApproximationControl:
                 # We don't calculate the usual TD-error, as there is no next_action to take here.
 
                 # The dot product between feature vector and the weights essentially gives us the approximated q-value.
-                self.w += self.alpha * (reward - np.dot(feature_vector, self.w)) * E
+                self.w += self.alpha * (reward - self.get_qvalue(state, action)) * E
 
                 # Jumping out of the training episode.
                 break
@@ -81,46 +84,35 @@ class LinearFunctionApproximationControl:
             # Some TD-update to the action-value function:
             # This is for the usual case where we are not in the terminal state yet,
             # so we update our action-value function based on usual TD-error.
-            self.w += self.alpha * (reward + np.dot(next_feature_vector, self.w) - np.dot(feature_vector, self.w)) * E
+            self.w += self.alpha * (reward + self.get_qvalue(next_state, next_action) - self.get_qvalue(state, action)) * E
 
             # Setting up for next action:
             state, action, feature_vector = next_state, next_action, next_feature_vector
 
 
-    def get_feature_vector(self, state, action):
+    def get_feature_vector(self, state):
         """
         Takes in a state-pair of the form (dealer_sum, player_sum, action).
         and returns a 1D vector with 36 entries, where each entry corresponds to some specific feature.
         """
 
         # Setting up the feature vector:
-        feature_vector = np.zeros(36)
+        feature_vector = np.zeros(18)
 
         # Extracting the useful information for the features:
         dealer_sum = state[0]
         player_sum = state[1]
-        action = "stick" if action == 0 else "hit"
 
         # Defining the features:
         dealer_ranges = [(1, 4), (4, 7), (7, 10)]
         player_ranges = [(1, 6), (4, 9), (7, 12), (10, 15), (13, 18), (16, 21)]
-        actions = ["hit", "stick"]
 
-        """
-        features = []
-        for i in dealer_ranges:
-            for j in player_ranges:
-                for a in actions:
-                    features.append((i, j, a))
-        """
-
-        for i, (d_range, p_range, a) in enumerate(product(dealer_ranges, player_ranges, actions)):
-            if d_range[0] <= dealer_sum <= d_range[1] and p_range[0] <= player_sum <= p_range[1] and action == a:
+        for i, (d_range, p_range) in enumerate(product(dealer_ranges, player_ranges)):
+            if d_range[0] <= dealer_sum <= d_range[1] and p_range[0] <= player_sum <= p_range[1]:
                 feature_vector[i] = 1
         
         return feature_vector
 
-    
     def get_action(self, state):
         """
         Decides which action we should take in a state, according to our policy.
@@ -132,21 +124,10 @@ class LinearFunctionApproximationControl:
             return np.random.randint(self.env.action_space.n)
         
         else:
-            return np.argmax([np.dot(self.get_feature_vector((state[0], state[1]), a), self.w) for a in range(self.env.action_space.n)])
+            return np.argmax([self.get_qvalue(state, a) for a in range(self.env.action_space.n)])
 
-    def get_policy(self):
-        """
-        Returns the current policy based on the action-value function.
-        """
-        policy = defaultdict(int)
-        dealer = [i for i in range(1, 11)]
-        player = [i for i in range(1, 22)]
-        states = product(dealer, player)
-
-        for state in states:
-            policy[state] = np.argmax([np.dot(self.get_feature_vector((state[0], state[1]), a), self.w) for a in range(self.env.action_space.n)])
-
-        return policy
+    def get_qvalue(self, state, action):
+        return np.dot(self.get_feature_vector((state[0], state[1])).T, self.w)[action]
     
     def get_action_values(self):
         """
@@ -159,9 +140,23 @@ class LinearFunctionApproximationControl:
 
         for state in states:
             for action in range(self.env.action_space.n):
-                q[state][action] = np.dot(self.get_feature_vector((state[0], state[1]), action), self.w)
+                q[state][action] = self.get_qvalue(state, action)
 
         return q
+
+    def get_policy(self):
+        """
+        Returns the current policy based on the action-value function.
+        """
+        policy = defaultdict(int)
+        dealer = [i for i in range(1, 11)]
+        player = [i for i in range(1, 22)]
+        states = product(dealer, player)
+
+        for state in states:
+            policy[state] = np.argmax([self.get_qvalue(state, a) for a in range(self.env.action_space.n)])
+
+        return policy
 
     def learn(self, num_episodes):
         """
@@ -229,7 +224,7 @@ class LinearFunctionApproximationControl:
         Parameter:
             q_star (dict): The optimal action-value function, which in our case is obtained from Monte Carlo control.
         """
-        return sum( (np.dot(agent.get_feature_vector(state, action), agent.w) - q_star[state][action])**2 for state in q_star for action in range(len(q_star[state] ))) / ( len(q_star) * agent.env.action_space.n)
+        return sum( (agent.get_qvalue(state, action) - q_star[state][action])**2 for state in q_star for action in range(len(q_star[state] ))) / ( len(q_star) * agent.env.action_space.n)
 
     def plot_error_lambda(mc_action_value, num_episodes = 1000):
         """
@@ -239,8 +234,8 @@ class LinearFunctionApproximationControl:
         mse_values = []
         for i in range(11):
             agent = LinearFunctionApproximationControl(Easy21Environment(), lamb = i / 10)
-            policy = agent.learn(num_episodes)    
-            MSE = sum( (np.dot(agent.get_feature_vector(state, policy[state]), agent.w) - mc_action_value[state][action])**2 for state in mc_action_value for action in range(len(mc_action_value[state])) ) / ( len(mc_action_value) * agent.env.action_space.n)
+            agent.learn(num_episodes)    
+            MSE = LinearFunctionApproximationControl.compute_mse(agent, mc_action_value)
             mse_values.append([i/10, MSE])
         
         fig = plt.figure(figsize = (12, 6))
@@ -256,52 +251,11 @@ class LinearFunctionApproximationControl:
 
         plt.show()
 
+    
 
 with open("PracticalRL\Pickle\MonteCarloActionValue.pkl", "rb") as f:
     mc_action_value = pickle.load(f)
 
 
-# LinearFunctionApproximationControl.plot_error_lambda(mc_action_value, num_episodes = 10_000)
-
-# agent = LinearFunctionApproximationControl(Easy21Environment())
-# policy = agent.learn(200_000)
-
-# with open('PracticalRL/Policies/LinearApproximation21.txt', 'w') as f:
-#         sorted_dict = dict(sorted(policy.items(), key = lambda x: (x[0][0], x[0][1])))
-#         for state in sorted_dict:
-#             f.write(str(state) + ": " + str(policy[state]) + "\n")
-#         f.close()
-
-LinearFunctionApproximationControl.plot_mse(mc_action_value, num_episodes = 5_000)
-
-"""
-agent_bad = LinearFunctionApproximationControl(Easy21Environment())
-policy = agent_bad.learn(100)
-q_bad = agent_bad.get_action_values()
-
-agent_better = LinearFunctionApproximationControl(Easy21Environment())
-agent_better.learn(10_000)
-q_better = agent_better.get_action_values()
-
-
-with open('PracticalRL/Policies/bad.txt', 'w') as f:
-        sorted_dict = dict(sorted(q_better.items(), key = lambda x: (x[0][0], x[0][1])))
-        for state in sorted_dict:
-            f.write(f'{(state[0], state[1], 0)}: {q_bad[state][0]} \n')
-        for state in sorted_dict:
-            f.write(f'{(state[0], state[1], 1)}: {q_bad[state][1]} \n')
-        f.close()
-
-with open('PracticalRL/Policies/badPolicy.txt', 'w') as f:
-        sorted_dict = dict(sorted(policy.items(), key = lambda x: (x[0][0], x[0][1])))
-        for state in sorted_dict:
-            f.write(str(state) + ": " + str(policy[state]) + "\n")
-        f.close()
-
-with open('PracticalRL/Policies/better.txt', 'w') as f:
-        sorted_dict = dict(sorted(q_better.items(), key = lambda x: (x[0][0], x[0][1])))
-        for state in sorted_dict:
-            for action in range(agent_better.env.action_space.n):
-                f.write(f'{(state[0], state[1], action)}: {q_better[state][action]} \n')
-        f.close()
-"""
+# LinearFunctionApproximationControl.plot_mse(mc_action_value, num_episodes = 10_000)
+LinearFunctionApproximationControl.plot_error_lambda(mc_action_value)

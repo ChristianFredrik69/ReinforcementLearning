@@ -1,0 +1,33 @@
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Current SDK version is 0.15.4
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Configure stats pid to 6924
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Loading settings from C:\Users\cjohn\.config\wandb\settings
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Loading settings from C:\Users\cjohn\OneDrive\Desktop\Reinforcement Learning\wandb\settings
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-07-02 01:14:59,703 INFO    MainThread:6924 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Cogito\\DQN)\\CartPole.py', 'program': 'c:\\Users\\cjohn\\OneDrive\\Desktop\\Reinforcement Learning\\Cogito\\DQN)\\CartPole.py'}
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:_log_setup():507] Logging user logs to C:\Users\cjohn\OneDrive\Desktop\Reinforcement Learning\wandb\run-20230702_011459-2zyzkxh8\logs\debug.log
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:_log_setup():508] Logging internal logs to C:\Users\cjohn\OneDrive\Desktop\Reinforcement Learning\wandb\run-20230702_011459-2zyzkxh8\logs\debug-internal.log
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:init():547] calling init triggers
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'wandb_name': 'DQN-CartPole', 'env': 'CartPole-v1', 'ac_dim': 1, 'ob_dim': 4, 'action_space': 2, 'hidden_dim': 25, 'lr': 0.01, 'epsilon': 0.15, 'gamma': 0.99, 'batch_size': 64, 'min_buffer_size': 100, 'buffer_capacity': 10000, 'episodes': 500, 'eval_freq': 25, 'update_target_network_freq': 25, 'double_dqn': True}
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:init():596] starting backend
+2023-07-02 01:14:59,704 INFO    MainThread:6924 [wandb_init.py:init():600] setting up manager
+2023-07-02 01:14:59,708 INFO    MainThread:6924 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-07-02 01:14:59,711 INFO    MainThread:6924 [wandb_init.py:init():606] backend started and connected
+2023-07-02 01:14:59,715 INFO    MainThread:6924 [wandb_init.py:init():703] updated telemetry
+2023-07-02 01:14:59,791 INFO    MainThread:6924 [wandb_init.py:init():736] communicating run to backend with 60.0 second timeout
+2023-07-02 01:15:00,283 INFO    MainThread:6924 [wandb_run.py:_on_init():2176] communicating current version
+2023-07-02 01:15:00,513 INFO    MainThread:6924 [wandb_run.py:_on_init():2185] got version response 
+2023-07-02 01:15:00,513 INFO    MainThread:6924 [wandb_init.py:init():787] starting run threads in backend
+2023-07-02 01:15:02,529 INFO    MainThread:6924 [wandb_run.py:_console_start():2155] atexit reg
+2023-07-02 01:15:02,530 INFO    MainThread:6924 [wandb_run.py:_redirect():2010] redirect: 3
+2023-07-02 01:15:02,530 INFO    MainThread:6924 [wandb_run.py:_redirect():2075] Wrapping output streams.
+2023-07-02 01:15:02,530 INFO    MainThread:6924 [wandb_run.py:_redirect():2100] Redirects installed.
+2023-07-02 01:15:02,530 INFO    MainThread:6924 [wandb_init.py:init():828] run started, returning control to user process
+2023-07-02 01:16:28,986 INFO    MainThread:6924 [wandb_run.py:_finish():1890] finishing run chrisfjo/DQN-CartPole/2zyzkxh8
+2023-07-02 01:16:28,986 INFO    MainThread:6924 [wandb_run.py:_atexit_cleanup():2124] got exitcode: 0
+2023-07-02 01:16:28,986 INFO    MainThread:6924 [wandb_run.py:_restore():2107] restore
+2023-07-02 01:16:28,986 INFO    MainThread:6924 [wandb_run.py:_restore():2113] restore done
+2023-07-02 01:16:36,832 INFO    MainThread:6924 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-07-02 01:16:36,833 INFO    MainThread:6924 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-07-02 01:16:36,837 INFO    MainThread:6924 [wandb_run.py:_footer_sync_info():3426] logging synced files
