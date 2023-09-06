@@ -1,0 +1,26 @@
+2023-06-08 01:21:42,324 INFO    MainThread:5968 [wandb_setup.py:_flush():68] Configure stats pid to 5968
+2023-06-08 01:21:42,324 INFO    MainThread:5968 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Per Chr Håvedegård\.config\wandb\settings
+2023-06-08 01:21:42,325 INFO    MainThread:5968 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Per Chr Håvedegård\Desktop\Cogito\wandb\settings
+2023-06-08 01:21:42,325 INFO    MainThread:5968 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-06-08 01:21:42,325 INFO    MainThread:5968 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_Acrobot.py', 'program': 'c:\\Users\\Per Chr Håvedegård\\Desktop\\Cogito\\train_Acrobot.py'}
+2023-06-08 01:21:42,326 INFO    MainThread:5968 [wandb_init.py:_log_setup():492] Logging user logs to C:\Users\Per Chr Håvedegård\Desktop\Cogito\wandb\run-20230608_012142-5ju1i3ov\logs\debug.log
+2023-06-08 01:21:42,326 INFO    MainThread:5968 [wandb_init.py:_log_setup():493] Logging internal logs to C:\Users\Per Chr Håvedegård\Desktop\Cogito\wandb\run-20230608_012142-5ju1i3ov\logs\debug-internal.log
+2023-06-08 01:21:42,327 INFO    MainThread:5968 [wandb_init.py:init():532] calling init triggers
+2023-06-08 01:21:42,327 INFO    MainThread:5968 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'env': 'Acrobot-v1', 'ac_dim': 3, 'ob_dim': 6, 'lr': 0.8, 'epsilon': 0.1, 'gamma': 0.99, 'wandb_name': 'Acrobot-v1', 'episodes': 10000, 'eval_frequency': 50}
+2023-06-08 01:21:42,328 INFO    MainThread:5968 [wandb_init.py:init():588] starting backend
+2023-06-08 01:21:42,328 INFO    MainThread:5968 [wandb_init.py:init():592] setting up manager
+2023-06-08 01:21:42,335 INFO    MainThread:5968 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-06-08 01:21:42,347 INFO    MainThread:5968 [wandb_init.py:init():599] backend started and connected
+2023-06-08 01:21:42,360 INFO    MainThread:5968 [wandb_init.py:init():687] updated telemetry
+2023-06-08 01:21:42,421 INFO    MainThread:5968 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-06-08 01:21:42,967 INFO    MainThread:5968 [wandb_run.py:_on_init():2134] communicating current version
+2023-06-08 01:21:43,092 INFO    MainThread:5968 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.15.4 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-06-08 01:21:43,092 INFO    MainThread:5968 [wandb_init.py:init():775] starting run threads in backend
+2023-06-08 01:21:43,321 INFO    MainThread:5968 [wandb_run.py:_console_start():2114] atexit reg
+2023-06-08 01:21:43,322 INFO    MainThread:5968 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-06-08 01:21:43,322 INFO    MainThread:5968 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-06-08 01:21:43,322 INFO    MainThread:5968 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-06-08 01:21:43,323 INFO    MainThread:5968 [wandb_init.py:init():817] run started, returning control to user process
+2023-06-08 01:23:45,564 WARNING MsgRouterThr:5968 [router.py:message_loop():77] message_loop has been closed

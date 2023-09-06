@@ -1,0 +1,65 @@
+You start with 7 cards.
+
+Starting player is random
+
+if starting card is wild4, shuffle the deck and get a new starting card. 
+
+Draw2 makes the next player draw two cards, and their turn is skipped.
+If draw2 first card, then the first player must draw two cards and player gets skipped.
+If wild first card, the first player chooses which color should be played.
+If skip first card, the player who would usually start gets skipped over.
+
+
+# def get_legal_actions(self, players, player_id):
+    
+#     wild_flag = 0
+#     wild_draw_4_flag = 0
+#     legal_actions = []
+#     wild_4_actions = []
+#     hand = players[player_id].hand
+#     target = self.target
+    
+#     if target.type == 'wild':
+#         for card in hand:
+#             if card.type == 'wild':
+#                 if card.trait == 'wild_draw_4':
+#                     if wild_draw_4_flag == 0:
+#                         wild_draw_4_flag = 1
+#                         wild_4_actions.extend(WILD_DRAW_4)
+#                 else:
+#                     if wild_flag == 0:
+#                         wild_flag = 1
+#                         legal_actions.extend(WILD)
+#             elif card.color == target.color:
+#                 legal_actions.append(card.str)
+
+#     # target is action card or number card
+#     else:
+#         for card in hand:
+#             if card.type == 'wild':
+#                 if card.trait == 'wild_draw_4':
+#                     if wild_draw_4_flag == 0:
+#                         wild_draw_4_flag = 1
+#                         wild_4_actions.extend(WILD_DRAW_4)
+#                 else:
+#                     if wild_flag == 0:
+#                         wild_flag = 1
+#                         legal_actions.extend(WILD)
+#             elif card.color == target.color or card.trait == target.trait:
+#                 legal_actions.append(card.str)
+#     if not legal_actions:
+#         legal_actions = wild_4_actions
+#     if not legal_actions:
+#         legal_actions = ['draw']
+#     return legal_actions
+
+
+
+
+
+
+
+
+
+
+

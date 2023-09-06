@@ -1,0 +1,93 @@
+Episode 1 episode return -500.0
+Episode 2 episode return -500.0
+Episode 3 episode return -500.0
+Episode 4 episode return -500.0
+Episode 5 episode return -500.0
+Episode 6 episode return -500.0
+Episode 7 episode return -500.0
+Episode 8 episode return -500.0
+Episode 9 episode return -500.0
+Episode 10 episode return -500.0
+Episode 11 episode return -500.0
+Episode 12 episode return -500.0
+Episode 13 episode return -500.0
+Episode 14 episode return -500.0
+Episode 15 episode return -500.0
+Episode 16 episode return -500.0
+Episode 17 episode return -500.0
+Episode 18 episode return -500.0
+Episode 19 episode return -500.0
+Episode 20 episode return -500.0
+Episode 21 episode return -500.0
+Episode 22 episode return -500.0
+Episode 23 episode return -500.0
+Episode 24 episode return -500.0
+Episode 25 episode return -500.0
+Episode 25 episode return -500.0
+Episode 26 episode return -500.0
+Episode 27 episode return -500.0
+Episode 28 episode return -500.0
+Episode 29 episode return -500.0
+Episode 30 episode return -500.0
+Episode 31 episode return -500.0
+Episode 32 episode return -500.0
+Episode 33 episode return -500.0
+Episode 34 episode return -500.0
+Episode 35 episode return -500.0
+Episode 36 episode return -500.0
+Episode 37 episode return -500.0
+Episode 38 episode return -500.0
+Episode 39 episode return -500.0
+Episode 40 episode return -500.0
+Episode 41 episode return -500.0
+Episode 42 episode return -500.0
+Episode 43 episode return -500.0
+Episode 44 episode return -500.0
+Episode 45 episode return -500.0
+Episode 46 episode return -500.0
+Episode 47 episode return -500.0
+Episode 48 episode return -500.0
+Episode 49 episode return -500.0
+Episode 50 episode return -500.0
+Episode 50 episode return -500.0
+Episode 51 episode return -500.0
+Episode 52 episode return -500.0
+Episode 53 episode return -500.0
+Episode 54 episode return -500.0
+Episode 55 episode return -500.0
+Episode 56 episode return -500.0
+Episode 57 episode return -500.0
+Episode 58 episode return -500.0
+Episode 59 episode return -500.0
+Episode 60 episode return -500.0
+Episode 61 episode return -500.0
+Episode 62 episode return -500.0
+Episode 63 episode return -500.0
+Episode 64 episode return -500.0
+Episode 65 episode return -500.0
+Episode 66 episode return -500.0
+Episode 67 episode return -500.0
+Episode 68 episode return -500.0
+Episode 69 episode return -500.0
+Episode 70 episode return -500.0
+Episode 71 episode return -500.0
+Episode 72 episode return -500.0
+Episode 73 episode return -500.0
+Episode 74 episode return -500.0
+Episode 75 episode return -500.0
+Traceback (most recent call last):
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 67, in <module>
+    train_agent(agent)
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 48, in train_agent
+    action = agent._greedy_action(discretize(obs))
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 7, in discretize
+    return tuple(np.round(state, 1))
+  File "<__array_function__ internals>", line 180, in round_
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\numpy\core\fromnumeric.py", line 3731, in round_
+    return around(a, decimals=decimals, out=out)
+  File "<__array_function__ internals>", line 180, in around
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\numpy\core\fromnumeric.py", line 3305, in around
+    return _wrapfunc(a, 'round', decimals=decimals, out=out)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\numpy\core\fromnumeric.py", line 57, in _wrapfunc
+    return bound(*args, **kwds)
+KeyboardInterrupt

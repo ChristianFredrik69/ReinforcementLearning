@@ -1,0 +1,25 @@
+2023-02-28 18:18:56,115 INFO    MainThread:9404 [wandb_setup.py:_flush():68] Configure stats pid to 9404
+2023-02-28 18:18:56,116 INFO    MainThread:9404 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Per Chr Håvedegård\.config\wandb\settings
+2023-02-28 18:18:56,116 INFO    MainThread:9404 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\wandb\settings
+2023-02-28 18:18:56,116 INFO    MainThread:9404 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-02-28 18:18:56,116 INFO    MainThread:9404 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_Qlearning.py', 'program': 'c:\\Users\\Per Chr Håvedegård\\Desktop\\Semester 2\\Cogito\\train_Qlearning.py'}
+2023-02-28 18:18:56,117 INFO    MainThread:9404 [wandb_init.py:_log_setup():492] Logging user logs to C:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\wandb\run-20230228_181856-hch1ik8r\logs\debug.log
+2023-02-28 18:18:56,118 INFO    MainThread:9404 [wandb_init.py:_log_setup():493] Logging internal logs to C:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\wandb\run-20230228_181856-hch1ik8r\logs\debug-internal.log
+2023-02-28 18:18:56,119 INFO    MainThread:9404 [wandb_init.py:init():532] calling init triggers
+2023-02-28 18:18:56,119 INFO    MainThread:9404 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'env': 'CartPole-v1', 'ac_dim': 2, 'ob_dim': 4, 'lr': 0.8, 'epsilon': 0.1, 'gamma': 0.99, 'wandb_name': 'CartPole-v1', 'episodes': 10000, 'eval_frequency': 25}
+2023-02-28 18:18:56,120 INFO    MainThread:9404 [wandb_init.py:init():588] starting backend
+2023-02-28 18:18:56,120 INFO    MainThread:9404 [wandb_init.py:init():592] setting up manager
+2023-02-28 18:18:56,127 INFO    MainThread:9404 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-02-28 18:18:56,143 INFO    MainThread:9404 [wandb_init.py:init():599] backend started and connected
+2023-02-28 18:18:56,153 INFO    MainThread:9404 [wandb_init.py:init():687] updated telemetry
+2023-02-28 18:18:56,214 INFO    MainThread:9404 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-02-28 18:18:56,748 INFO    MainThread:9404 [wandb_run.py:_on_init():2134] communicating current version
+2023-02-28 18:18:56,890 INFO    MainThread:9404 [wandb_run.py:_on_init():2143] got version response 
+2023-02-28 18:18:56,890 INFO    MainThread:9404 [wandb_init.py:init():775] starting run threads in backend
+2023-02-28 18:18:57,148 INFO    MainThread:9404 [wandb_run.py:_console_start():2114] atexit reg
+2023-02-28 18:18:57,150 INFO    MainThread:9404 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-02-28 18:18:57,151 INFO    MainThread:9404 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-02-28 18:18:57,151 INFO    MainThread:9404 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-02-28 18:18:57,152 INFO    MainThread:9404 [wandb_init.py:init():817] run started, returning control to user process
+2023-02-28 18:19:21,299 WARNING MsgRouterThr:9404 [router.py:message_loop():77] message_loop has been closed

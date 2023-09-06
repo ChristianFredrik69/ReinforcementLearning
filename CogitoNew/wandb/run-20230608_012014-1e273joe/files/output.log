@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "c:\Users\Per Chr Håvedegård\Desktop\Cogito\train_Acrobot.py", line 84, in <module>
+    train_agent(agent)
+  File "c:\Users\Per Chr Håvedegård\Desktop\Cogito\train_Acrobot.py", line 66, in train_agent
+    next_obs, reward, terminated, truncated, info = eval_env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\time_limit.py", line 51, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\order_enforcing.py", line 38, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\env_checker.py", line 39, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 227, in step
+    self.render()
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 367, in render
+    self.clock.tick(self.metadata["render_fps"])
+KeyboardInterrupt

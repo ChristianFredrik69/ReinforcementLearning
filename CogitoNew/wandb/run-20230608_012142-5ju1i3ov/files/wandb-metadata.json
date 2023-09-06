@@ -1,0 +1,42 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2023-06-07T23:21:43.124188",
+    "startedAt": "2023-06-07T23:21:42.319313",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\Per Chr H\u00e5vedeg\u00e5rd\\Desktop\\Cogito\\train_Acrobot.py",
+    "codePath": "train_Acrobot.py",
+    "git": {
+        "remote": "https://gitlab.stud.idi.ntnu.no/chrisfjo/my-awesome-project.git",
+        "commit": "a944b1bacdb0dd2d9cf462605c3940ad4db0a691"
+    },
+    "email": "cjohnsen41@gmail.com",
+    "root": "C:/Users/Per Chr H\u00e5vedeg\u00e5rd/Desktop/Cogito",
+    "host": "CF",
+    "username": "Per Chr H\u00e5vedeg\u00e5rd",
+    "executable": "C:\\Users\\Per Chr H\u00e5vedeg\u00e5rd\\Desktop\\Ny mappe\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2511.0,
+        "min": 0.0,
+        "max": 2712.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2511.0,
+            "min": 0.0,
+            "max": 2712.0
+        }
+    ],
+    "disk": {
+        "total": 475.69237899780273,
+        "used": 251.93945693969727
+    },
+    "memory": {
+        "total": 7.854137420654297
+    }
+}

@@ -1,0 +1,28 @@
+
+Episode 500 episode return -500.0
+Episode 1000 episode return -389.0
+Episode 1500 episode return -158.0
+Episode 2000 episode return -227.0
+Episode 2500 episode return -270.0
+Episode 3000 episode return -164.0
+Episode 3500 episode return -216.0
+Episode 4000 episode return -196.0
+Episode 4500 episode return -281.0
+Episode 5000 episode return -158.0
+Episode 5500 episode return -185.0
+Traceback (most recent call last):
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 84, in <module>
+    train_agent(agent)
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 30, in train_agent
+    next_obs, reward, terminated, truncated, info = train_env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\time_limit.py", line 51, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\order_enforcing.py", line 38, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\env_checker.py", line 39, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 221, in step
+    ns[3] = bound(ns[3], -self.MAX_VEL_2, self.MAX_VEL_2)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 421, in bound
+    return min(max(x, m), M)
+KeyboardInterrupt

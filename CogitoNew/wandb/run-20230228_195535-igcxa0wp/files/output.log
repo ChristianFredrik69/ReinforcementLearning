@@ -1,0 +1,67 @@
+Episode 1 episode return 990.0340504646301
+Episode 2 episode return 989.5346900224686
+Episode 3 episode return 986.2268757820129
+Episode 4 episode return 991.5681807994843
+Episode 5 episode return 990.4099363088608
+Episode 6 episode return 990.681131541729
+Episode 7 episode return 988.608838558197
+Episode 8 episode return 989.8499872088432
+Episode 9 episode return 994.0251032710075
+Episode 10 episode return 999.4403748512268
+Episode 11 episode return 998.982483625412
+Episode 12 episode return 998.6320139169693
+Episode 13 episode return 998.8716806173325
+Episode 14 episode return 999.7251599431038
+Episode 15 episode return 999.3822455406189
+Episode 16 episode return 999.5900754928589
+Episode 17 episode return 999.4082651138306
+Episode 18 episode return 998.2600625753403
+Episode 19 episode return 999.526413321495
+Episode 20 episode return 999.1978038549423
+Episode 21 episode return 998.9329715967178
+Episode 22 episode return 999.2252886891365
+Episode 23 episode return 999.1466847062111
+Episode 24 episode return 999.7115895152092
+Episode 25 episode return 998.3031782507896
+Episode 25 episode return -500.0
+Episode 26 episode return 998.9095156788826
+Episode 27 episode return 998.2152549624443
+Episode 28 episode return 999.0528031587601
+Episode 29 episode return 999.4465896487236
+Episode 30 episode return 999.8062350153923
+Episode 31 episode return 998.8451068401337
+Episode 32 episode return 999.0923674702644
+Episode 33 episode return 998.6030513048172
+Episode 34 episode return 999.3461880087852
+Episode 35 episode return 998.5178988575935
+Episode 36 episode return 998.3612900972366
+Episode 37 episode return 998.9945637583733
+Episode 38 episode return 999.570467710495
+Episode 39 episode return 997.4375120997429
+Episode 40 episode return 997.4718735218048
+Episode 41 episode return 997.4820891022682
+Episode 42 episode return 997.9701363444328
+Episode 43 episode return 999.3754989504814
+Episode 44 episode return 999.2467626929283
+Episode 45 episode return 999.1717373132706
+Episode 46 episode return 999.7263822555542
+Episode 47 episode return 999.065802693367
+Episode 48 episode return 998.346696138382
+Episode 49 episode return 998.3449259400368
+Episode 50 episode return 998.9191102385521
+Traceback (most recent call last):
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 83, in <module>
+    train_agent(agent)
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 65, in train_agent
+    next_obs, reward, terminated, truncated, info = eval_env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\time_limit.py", line 51, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\order_enforcing.py", line 38, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\wrappers\env_checker.py", line 39, in step
+    return self.env.step(action)
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 227, in step
+    self.render()
+  File "C:\Users\Per Chr Håvedegård\Desktop\Ny mappe\lib\site-packages\gymnasium\envs\classic_control\acrobot.py", line 367, in render
+    self.clock.tick(self.metadata["render_fps"])
+KeyboardInterrupt

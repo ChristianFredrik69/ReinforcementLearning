@@ -1,0 +1,10 @@
+
+Episode 500 episode return -283.0
+Episode 1000 episode return -329.0
+Traceback (most recent call last):
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 83, in <module>
+    agent = QLearningAgent(QLearningAgent.Config())
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 42, in train_agent
+  File "c:\Users\Per Chr Håvedegård\Desktop\Semester 2\Cogito\train_Acrobot.py", line 14, in discretize
+    return state[0]//step0, 0, state[2]//step2, 0, state[4]//step4, state[5]//step5
+KeyboardInterrupt

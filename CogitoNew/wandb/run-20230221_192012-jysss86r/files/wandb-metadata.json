@@ -1,0 +1,36 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2023-02-21T18:20:13.396828",
+    "startedAt": "2023-02-21T18:20:12.646179",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\Per Chr H\u00e5vedeg\u00e5rd\\Desktop\\Semester 2\\Cogito\\train_Qlearning.py",
+    "codePath": "train_Qlearning.py",
+    "host": "CF",
+    "username": "Per Chr H\u00e5vedeg\u00e5rd",
+    "executable": "C:\\Users\\Per Chr H\u00e5vedeg\u00e5rd\\Desktop\\Ny mappe\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2511.0,
+        "min": 0.0,
+        "max": 2712.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2511.0,
+            "min": 0.0,
+            "max": 2712.0
+        }
+    ],
+    "disk": {
+        "total": 475.69237899780273,
+        "used": 252.01726150512695
+    },
+    "memory": {
+        "total": 7.854137420654297
+    }
+}
