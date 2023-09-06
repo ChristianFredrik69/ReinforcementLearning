@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.4",
+    "heartbeatAt": "2023-07-04T16:51:40.819828",
+    "startedAt": "2023-07-04T16:51:38.039383",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\cjohn\\OneDrive\\Desktop\\ReinforcementLearning\\Cogito\\DQN)\\CartPole.py",
+    "codePath": "Cogito\\DQN)\\CartPole.py",
+    "git": {
+        "remote": "https://github.com/ChristianFredrik69/ReinforcementLearning",
+        "commit": "4563427dcae0f66b7e0ed9925bf9da61bd06aba4"
+    },
+    "email": "cfj@johnsen.no",
+    "root": "C:/Users/cjohn/OneDrive/Desktop/ReinforcementLearning",
+    "host": "Christian",
+    "username": "cjohn",
+    "executable": "C:\\Users\\cjohn\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2000.0,
+        "min": 0.0,
+        "max": 2000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000.0,
+            "min": 0.0,
+            "max": 2000.0
+        }
+    ],
+    "disk": {
+        "total": 951.6455039978027,
+        "used": 140.53665924072266
+    },
+    "gpu": "NVIDIA RTX A3000 12GB Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A3000 12GB Laptop GPU",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.70494842529297
+    }
+}

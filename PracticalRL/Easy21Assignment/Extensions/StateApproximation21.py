@@ -168,7 +168,7 @@ class LinearFunctionApproximationControl:
             
             self.learn_episode()
 
-            if (i % 10_000 == 0):
+            if (i % 1_000 == 0):
                 print(i)
         
         return self.get_policy()
@@ -258,4 +258,4 @@ with open("PracticalRL\Pickle\MonteCarloActionValue.pkl", "rb") as f:
 
 
 # LinearFunctionApproximationControl.plot_mse(mc_action_value, num_episodes = 10_000)
-LinearFunctionApproximationControl.plot_error_lambda(mc_action_value)
+LinearFunctionApproximationControl.plot_error_lambda(mc_action_value, num_episodes = 5_000)

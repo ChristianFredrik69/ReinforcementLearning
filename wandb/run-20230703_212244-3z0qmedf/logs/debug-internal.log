@@ -1,0 +1,175 @@
+2023-07-03 21:22:44,353 INFO    StreamThr :22852 [internal.py:wandb_internal():86] W&B internal server running at pid: 22852, started at: 2023-07-03 21:22:44.353899
+2023-07-03 21:22:44,360 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: status
+2023-07-03 21:22:44,363 INFO    WriterThread:22852 [datastore.py:open_for_write():85] open: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\run-3z0qmedf.wandb
+2023-07-03 21:22:44,363 DEBUG   SenderThread:22852 [sender.py:send():369] send: header
+2023-07-03 21:22:44,440 DEBUG   SenderThread:22852 [sender.py:send():369] send: run
+2023-07-03 21:22:45,497 INFO    SenderThread:22852 [dir_watcher.py:__init__():211] watching files in: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files
+2023-07-03 21:22:45,497 INFO    SenderThread:22852 [sender.py:_start_run_threads():1100] run started: 3z0qmedf with start time 1688412164.353899
+2023-07-03 21:22:45,497 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: summary_record
+2023-07-03 21:22:45,498 INFO    SenderThread:22852 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-03 21:22:45,501 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: check_version
+2023-07-03 21:22:45,501 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: check_version
+2023-07-03 21:22:45,708 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: run_start
+2023-07-03 21:22:45,723 DEBUG   HandlerThread:22852 [system_info.py:__init__():31] System info init
+2023-07-03 21:22:45,723 DEBUG   HandlerThread:22852 [system_info.py:__init__():46] System info init done
+2023-07-03 21:22:45,723 INFO    HandlerThread:22852 [system_monitor.py:start():181] Starting system monitor
+2023-07-03 21:22:45,723 INFO    SystemMonitor:22852 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-03 21:22:45,723 INFO    HandlerThread:22852 [system_monitor.py:probe():201] Collecting system info
+2023-07-03 21:22:45,723 INFO    SystemMonitor:22852 [interfaces.py:start():190] Started cpu monitoring
+2023-07-03 21:22:45,723 INFO    SystemMonitor:22852 [interfaces.py:start():190] Started disk monitoring
+2023-07-03 21:22:45,723 INFO    SystemMonitor:22852 [interfaces.py:start():190] Started gpu monitoring
+2023-07-03 21:22:45,732 INFO    SystemMonitor:22852 [interfaces.py:start():190] Started memory monitoring
+2023-07-03 21:22:45,740 INFO    SystemMonitor:22852 [interfaces.py:start():190] Started network monitoring
+2023-07-03 21:22:45,740 DEBUG   HandlerThread:22852 [system_info.py:probe():195] Probing system
+2023-07-03 21:22:45,740 DEBUG   HandlerThread:22852 [system_info.py:_probe_git():180] Probing git
+2023-07-03 21:22:45,795 DEBUG   HandlerThread:22852 [system_info.py:_probe_git():188] Probing git done
+2023-07-03 21:22:45,795 DEBUG   HandlerThread:22852 [system_info.py:probe():240] Probing system done
+2023-07-03 21:22:45,795 DEBUG   HandlerThread:22852 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.4', 'heartbeatAt': '2023-07-03T19:22:45.740895', 'startedAt': '2023-07-03T19:22:44.342412', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\cjohn\\OneDrive\\Desktop\\ReinforcementLearning\\Cogito\\DQN)\\CartPole.py', 'codePath': 'Cogito\\DQN)\\CartPole.py', 'git': {'remote': 'https://github.com/ChristianFredrik69/ReinforcementLearning', 'commit': '4563427dcae0f66b7e0ed9925bf9da61bd06aba4'}, 'email': 'cfj@johnsen.no', 'root': 'C:/Users/cjohn/OneDrive/Desktop/ReinforcementLearning', 'host': 'Christian', 'username': 'cjohn', 'executable': 'C:\\Users\\cjohn\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 16, 'cpu_count_logical': 24, 'cpu_freq': {'current': 1520.0, 'min': 0.0, 'max': 2000.0}, 'cpu_freq_per_core': [{'current': 1520.0, 'min': 0.0, 'max': 2000.0}], 'disk': {'total': 951.6455039978027, 'used': 140.29462051391602}, 'gpu': 'NVIDIA RTX A3000 12GB Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA RTX A3000 12GB Laptop GPU', 'memory_total': 12884901888}], 'memory': {'total': 31.70494842529297}}
+2023-07-03 21:22:45,795 INFO    HandlerThread:22852 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-03 21:22:45,795 INFO    HandlerThread:22852 [system_monitor.py:probe():214] Publishing system info
+2023-07-03 21:22:45,795 DEBUG   HandlerThread:22852 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-03 21:22:45,795 DEBUG   HandlerThread:22852 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-03 21:22:45,799 INFO    HandlerThread:22852 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-03 21:22:45,802 DEBUG   SenderThread:22852 [sender.py:send():369] send: files
+2023-07-03 21:22:45,802 INFO    SenderThread:22852 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-03 21:22:45,807 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-03 21:22:45,807 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: stop_status
+2023-07-03 21:22:46,020 DEBUG   SenderThread:22852 [sender.py:send():369] send: telemetry
+2023-07-03 21:22:46,116 DEBUG   SenderThread:22852 [sender.py:send():369] send: exit
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:send_exit():574] handling exit code: 1
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:send_exit():576] handling runtime: 0
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:send_exit():582] send defer
+2023-07-03 21:22:46,116 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-03 21:22:46,116 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 1
+2023-07-03 21:22:46,116 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-03 21:22:46,116 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-07-03 21:22:46,116 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 2
+2023-07-03 21:22:46,116 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-03 21:22:46,116 INFO    HandlerThread:22852 [interfaces.py:finish():202] Joined disk monitor
+2023-07-03 21:22:46,120 DEBUG   SystemMonitor:22852 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-03 21:22:46,120 DEBUG   SystemMonitor:22852 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-03 21:22:46,120 DEBUG   SystemMonitor:22852 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-03 21:22:46,157 INFO    HandlerThread:22852 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-03 21:22:46,158 INFO    HandlerThread:22852 [interfaces.py:finish():202] Joined memory monitor
+2023-07-03 21:22:46,158 INFO    HandlerThread:22852 [interfaces.py:finish():202] Joined network monitor
+2023-07-03 21:22:46,158 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,158 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-07-03 21:22:46,159 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 3
+2023-07-03 21:22:46,159 DEBUG   SenderThread:22852 [sender.py:send():369] send: stats
+2023-07-03 21:22:46,159 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,159 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-03 21:22:46,159 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,159 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-07-03 21:22:46,159 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 4
+2023-07-03 21:22:46,159 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,160 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-03 21:22:46,160 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,160 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-07-03 21:22:46,160 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 5
+2023-07-03 21:22:46,160 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,160 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-03 21:22:46,161 DEBUG   SenderThread:22852 [sender.py:send():369] send: summary
+2023-07-03 21:22:46,161 INFO    SenderThread:22852 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-03 21:22:46,161 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,161 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-07-03 21:22:46,161 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 6
+2023-07-03 21:22:46,162 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,162 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-03 21:22:46,162 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,162 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-07-03 21:22:46,163 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: status_report
+2023-07-03 21:22:46,438 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 7
+2023-07-03 21:22:46,438 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:46,438 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-03 21:22:46,439 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:46,439 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-07-03 21:22:46,506 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_modified():289] file/dir modified: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\config.yaml
+2023-07-03 21:22:46,506 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\wandb-metadata.json
+2023-07-03 21:22:46,506 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\wandb-summary.json
+2023-07-03 21:22:46,506 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\output.log
+2023-07-03 21:22:46,506 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\requirements.txt
+2023-07-03 21:22:46,543 INFO    wandb-upload_0:22852 [upload_job.py:push():133] Uploaded file C:\Users\cjohn\AppData\Local\Temp\tmpvnr_mwukwandb\ms8c28j0-wandb-metadata.json
+2023-07-03 21:22:47,178 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-03 21:22:48,121 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 8
+2023-07-03 21:22:48,121 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: poll_exit
+2023-07-03 21:22:48,121 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:48,121 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-03 21:22:48,122 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:48,122 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-07-03 21:22:48,122 INFO    SenderThread:22852 [job_builder.py:build():232] Attempting to build job artifact
+2023-07-03 21:22:48,122 INFO    SenderThread:22852 [job_builder.py:build():256] is repo sourced job
+2023-07-03 21:22:48,123 INFO    SenderThread:22852 [job_builder.py:build():297] adding wandb-job metadata file
+2023-07-03 21:22:48,143 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 9
+2023-07-03 21:22:48,143 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:48,143 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-03 21:22:48,149 DEBUG   SenderThread:22852 [sender.py:send():369] send: artifact
+2023-07-03 21:22:48,182 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-03 21:22:48,521 INFO    Thread-16 :22852 [dir_watcher.py:_on_file_modified():289] file/dir modified: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\output.log
+2023-07-03 21:22:49,136 INFO    SenderThread:22852 [sender.py:send_artifact():1450] sent artifact job-https___github.com_ChristianFredrik69_ReinforcementLearning_Cogito_DQN__CartPole.py - {'id': 'QXJ0aWZhY3Q6NTA0MTkzMjk1', 'digest': '46974b1bba610f7df7280efdabf7c35f', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_ChristianFredrik69_ReinforcementLearning_Cogito_DQN__CartPole.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_ChristianFredrik69_ReinforcementLearning_Cogito_DQN__CartPole.py', 'alias': 'v2'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjgwMjI4NzYx', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTA0MTkzMjk1', 'versionIndex': 2}}, 'version': 'v2'}
+2023-07-03 21:22:49,136 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:49,136 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-07-03 21:22:49,136 INFO    SenderThread:22852 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-03 21:22:49,536 INFO    SenderThread:22852 [dir_watcher.py:finish():389] scan: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files
+2023-07-03 21:22:49,536 INFO    SenderThread:22852 [dir_watcher.py:finish():403] scan save: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\config.yaml config.yaml
+2023-07-03 21:22:49,536 INFO    SenderThread:22852 [dir_watcher.py:finish():403] scan save: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\output.log output.log
+2023-07-03 21:22:49,540 INFO    SenderThread:22852 [dir_watcher.py:finish():403] scan save: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\requirements.txt requirements.txt
+2023-07-03 21:22:49,540 INFO    SenderThread:22852 [dir_watcher.py:finish():403] scan save: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\wandb-metadata.json wandb-metadata.json
+2023-07-03 21:22:49,540 INFO    SenderThread:22852 [dir_watcher.py:finish():403] scan save: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\wandb-summary.json wandb-summary.json
+2023-07-03 21:22:49,540 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 10
+2023-07-03 21:22:49,540 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: poll_exit
+2023-07-03 21:22:49,540 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:49,540 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 10
+2023-07-03 21:22:49,540 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:49,540 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-07-03 21:22:49,545 INFO    SenderThread:22852 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-03 21:22:50,049 INFO    wandb-upload_0:22852 [upload_job.py:push():133] Uploaded file C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\config.yaml
+2023-07-03 21:22:50,139 INFO    wandb-upload_1:22852 [upload_job.py:push():133] Uploaded file C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\output.log
+2023-07-03 21:22:50,253 INFO    wandb-upload_2:22852 [upload_job.py:push():133] Uploaded file C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\requirements.txt
+2023-07-03 21:22:50,566 INFO    wandb-upload_3:22852 [upload_job.py:push():133] Uploaded file C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\files\wandb-summary.json
+2023-07-03 21:22:50,782 INFO    Thread-15 (_thread_body):22852 [sender.py:transition_state():602] send defer: 11
+2023-07-03 21:22:50,782 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:50,782 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 11
+2023-07-03 21:22:50,782 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:50,782 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-07-03 21:22:50,782 INFO    SenderThread:22852 [file_pusher.py:join():164] waiting for file pusher
+2023-07-03 21:22:50,782 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 12
+2023-07-03 21:22:50,782 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:50,782 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 12
+2023-07-03 21:22:50,782 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:50,782 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-07-03 21:22:50,971 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 13
+2023-07-03 21:22:50,972 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:50,972 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 13
+2023-07-03 21:22:50,972 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:50,972 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-07-03 21:22:50,972 INFO    SenderThread:22852 [sender.py:transition_state():602] send defer: 14
+2023-07-03 21:22:50,972 DEBUG   SenderThread:22852 [sender.py:send():369] send: final
+2023-07-03 21:22:50,972 DEBUG   SenderThread:22852 [sender.py:send():369] send: footer
+2023-07-03 21:22:50,972 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: defer
+2023-07-03 21:22:50,972 INFO    HandlerThread:22852 [handler.py:handle_request_defer():170] handle defer: 14
+2023-07-03 21:22:50,973 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: defer
+2023-07-03 21:22:50,973 INFO    SenderThread:22852 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-07-03 21:22:50,973 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-03 21:22:50,973 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: server_info
+2023-07-03 21:22:50,973 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: get_summary
+2023-07-03 21:22:50,973 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: sampled_history
+2023-07-03 21:22:50,973 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: poll_exit
+2023-07-03 21:22:50,974 DEBUG   SenderThread:22852 [sender.py:send_request():396] send_request: server_info
+2023-07-03 21:22:51,152 INFO    MainThread:22852 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-07-03 21:22:51,152 INFO    MainThread:22852 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-07-03 21:22:51,152 INFO    MainThread:22852 [wandb_run.py:_footer_sync_info():3426] logging synced files
+2023-07-03 21:22:51,153 DEBUG   HandlerThread:22852 [handler.py:handle_request():144] handle_request: shutdown
+2023-07-03 21:22:51,153 INFO    HandlerThread:22852 [handler.py:finish():854] shutting down handler
+2023-07-03 21:22:51,981 INFO    WriterThread:22852 [datastore.py:close():298] close: C:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\wandb\run-20230703_212244-3z0qmedf\run-3z0qmedf.wandb
+2023-07-03 21:22:52,164 INFO    SenderThread:22852 [sender.py:finish():1526] shutting down sender
+2023-07-03 21:22:52,164 INFO    SenderThread:22852 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-03 21:22:52,164 INFO    SenderThread:22852 [file_pusher.py:join():164] waiting for file pusher

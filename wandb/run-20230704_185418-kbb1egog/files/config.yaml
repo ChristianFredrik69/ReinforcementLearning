@@ -1,0 +1,74 @@
+wandb_version: 1
+
+wandb_name:
+  desc: null
+  value: DQN-CartPole
+env:
+  desc: null
+  value: CartPole-v1
+ac_dim:
+  desc: null
+  value: 1
+ob_dim:
+  desc: null
+  value: 4
+action_space:
+  desc: null
+  value: 2
+hidden_dim:
+  desc: null
+  value: 25
+lr:
+  desc: null
+  value: 0.01
+epsilon:
+  desc: null
+  value: 0.05
+gamma:
+  desc: null
+  value: 0.99
+batch_size:
+  desc: null
+  value: 2
+min_buffer_size:
+  desc: null
+  value: 100
+buffer_capacity:
+  desc: null
+  value: 10000
+episodes:
+  desc: null
+  value: 5000
+eval_freq:
+  desc: null
+  value: 500
+update_target_network_freq:
+  desc: null
+  value: 35
+double_dqn:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.4
+    cli_version: 0.15.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1688489658.154289
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.11.4
+      5: 0.15.4
+      8:
+      - 3
+      - 5

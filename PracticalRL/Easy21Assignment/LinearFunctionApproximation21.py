@@ -106,14 +106,6 @@ class LinearFunctionApproximationControl:
         player_ranges = [(1, 6), (4, 9), (7, 12), (10, 15), (13, 18), (16, 21)]
         actions = ["hit", "stick"]
 
-        """
-        features = []
-        for i in dealer_ranges:
-            for j in player_ranges:
-                for a in actions:
-                    features.append((i, j, a))
-        """
-
         for i, (d_range, p_range, a) in enumerate(product(dealer_ranges, player_ranges, actions)):
             if d_range[0] <= dealer_sum <= d_range[1] and p_range[0] <= player_sum <= p_range[1] and action == a:
                 feature_vector[i] = 1
@@ -272,7 +264,8 @@ with open("PracticalRL\Pickle\MonteCarloActionValue.pkl", "rb") as f:
 #             f.write(str(state) + ": " + str(policy[state]) + "\n")
 #         f.close()
 
-LinearFunctionApproximationControl.plot_mse(mc_action_value, num_episodes = 5_000)
+LinearFunctionApproximationControl.plot_mse(mc_action_value, num_episodes = 3_000)
+# LinearFunctionApproximationControl.plot_error_lambda(mc_action_value, num_episodes = 10_000)
 
 """
 agent_bad = LinearFunctionApproximationControl(Easy21Environment())

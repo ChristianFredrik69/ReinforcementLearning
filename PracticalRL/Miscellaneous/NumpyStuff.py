@@ -60,3 +60,22 @@ print()
 print("~~~~~~")
 greggy = np.array([i for i in range(5)])
 print(greggy[:, None])
+
+import torch
+torch.set_default_tensor_type('torch.cuda.FloatTensor')
+gobby = torch.zeros(5)
+print(gobby)
+print(gobby.device.type)
+
+golgo = torch.zeros((5, 2))
+print(golgo)
+print(golgo.T)
+
+E = torch.zeros((18, 2))
+klubb = torch.ones(18)
+E[:, 0] += klubb
+print(E)
+
+
+jubba = torch.randint(10, (1,)).item()
+print(jubba.type)

@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "c:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\Cogito\DQN)\CartPole.py", line 82, in <module>
+    train_agent(agent)
+  File "c:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\Cogito\DQN)\CartPole.py", line 24, in train_agent
+    action = agent.act(obs)
+             ^^^^^^^^^^^^^^
+  File "c:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\Cogito\DQN)\DQNAgent.py", line 67, in act
+    return self._greedy_action(state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\Cogito\DQN)\DQNAgent.py", line 61, in _greedy_action
+    return torch.argmax(self.q_values(state)).item()
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\cjohn\OneDrive\Desktop\ReinforcementLearning\Cogito\DQN)\QNetwork.py", line 18, in forward
+    x = self.linear1(x)
+        ^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjohn\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat2 in method wrapper_CUDA_mm)
