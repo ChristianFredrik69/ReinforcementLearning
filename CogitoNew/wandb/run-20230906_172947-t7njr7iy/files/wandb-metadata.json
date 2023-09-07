@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-09-06T15:29:48.530712",
+    "startedAt": "2023-09-06T15:29:47.497787",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\cjohn\\Desktop\\Semester3\\Cogito\\ReinforcementLearning\\CogitoNew\\DQN)\\CartPole.py",
+    "codePath": "CogitoNew\\DQN)\\CartPole.py",
+    "git": {
+        "remote": "https://github.com/ChristianFredrik69/ReinforcementLearning",
+        "commit": "61a3cc692525528f4bd76069c05e0b02fd862a2a"
+    },
+    "email": "cjohnsen41@gmail.com",
+    "root": "C:/Users/cjohn/Desktop/Semester3/Cogito/ReinforcementLearning",
+    "host": "Vladimir",
+    "username": "cjohn",
+    "executable": "C:\\Users\\cjohn\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 3800.0,
+        "min": 0.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "total": 206.62987899780273,
+        "used": 143.96419525146484
+    },
+    "gpu": "NVIDIA GeForce GTX 1070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.93270492553711
+    }
+}
